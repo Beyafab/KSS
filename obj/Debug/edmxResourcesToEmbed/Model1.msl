@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KSSModelStoreContainer" CdmEntityContainer="KSSEntities1">
+    <EntitySetMapping Name="BirthApplications">
+      <EntityTypeMapping TypeName="KSSModel.BirthApplication">
+        <MappingFragment StoreEntitySet="BirthApplication">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Mname" ColumnName="Mname" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="Bdate" ColumnName="Bdate" />
+          <ScalarProperty Name="Bplace" ColumnName="Bplace" />
+          <ScalarProperty Name="subCity" ColumnName="subCity" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="zone" ColumnName="zone" />
+          <ScalarProperty Name="woreda" ColumnName="woreda" />
+          <ScalarProperty Name="nationality" ColumnName="nationality" />
+          <ScalarProperty Name="mother_sFullname" ColumnName="mother_sFullname" />
+          <ScalarProperty Name="mother_sNationality" ColumnName="mother_sNationality" />
+          <ScalarProperty Name="father_sFullname" ColumnName="father_sFullname" />
+          <ScalarProperty Name="father_sNationlity" ColumnName="father_sNationlity" />
+          <ScalarProperty Name="avaliableDates" ColumnName="avaliableDates" />
+          <ScalarProperty Name="paymentMethod" ColumnName="paymentMethod" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="ApplicationStatus" ColumnName="ApplicationStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeathApplications">
+      <EntityTypeMapping TypeName="KSSModel.DeathApplication">
+        <MappingFragment StoreEntitySet="DeathApplication">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="IdPhotoPath" ColumnName="IdPhotoPath" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Mname" ColumnName="Mname" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="ConfirmationLetter" ColumnName="ConfirmationLetter" />
+          <ScalarProperty Name="AvaliableDates" ColumnName="AvaliableDates" />
+          <ScalarProperty Name="paymentMethod" ColumnName="paymentMethod" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="ApplicationStatus" ColumnName="ApplicationStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IDApplications">
+      <EntityTypeMapping TypeName="KSSModel.IDApplication">
+        <MappingFragment StoreEntitySet="IDApplication">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Mname" ColumnName="Mname" />
+          <ScalarProperty Name="Lame" ColumnName="Lame" />
+          <ScalarProperty Name="Bdate" ColumnName="Bdate" />
+          <ScalarProperty Name="Btype" ColumnName="Btype" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="HouseNo" ColumnName="HouseNo" />
+          <ScalarProperty Name="AvaliableDates" ColumnName="AvaliableDates" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="PaymentMethode" ColumnName="PaymentMethode" />
+          <ScalarProperty Name="EmergencyContactFullname" ColumnName="EmergencyContactFullname" />
+          <ScalarProperty Name="EmergencyContactNo" ColumnName="EmergencyContactNo" />
+          <ScalarProperty Name="ApplicationStatus" ColumnName="ApplicationStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Managers">
+      <EntityTypeMapping TypeName="KSSModel.Manager">
+        <MappingFragment StoreEntitySet="Manager">
+          <ScalarProperty Name="managerId" ColumnName="managerId" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="staffId" ColumnName="staffId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarriageApplications">
+      <EntityTypeMapping TypeName="KSSModel.MarriageApplication">
+        <MappingFragment StoreEntitySet="MarriageApplication">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Fullnamespouse1" ColumnName="Fullnamespouse1" />
+          <ScalarProperty Name="Fullnamespouse2" ColumnName="Fullnamespouse2" />
+          <ScalarProperty Name="IdSpouse1PhotoPath" ColumnName="IdSpouse1PhotoPath" />
+          <ScalarProperty Name="Idspouse2PhotoPath" ColumnName="Idspouse2PhotoPath" />
+          <ScalarProperty Name="witnessAdress" ColumnName="witnessAdress" />
+          <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="availableDates" ColumnName="availableDates" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="ApplicationStatus" ColumnName="ApplicationStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="KSSModel.Notification">
+        <MappingFragment StoreEntitySet="Notification">
+          <ScalarProperty Name="notificationId" ColumnName="notificationId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="staffId" ColumnName="staffId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="KSSModel.Service">
+        <MappingFragment StoreEntitySet="Service">
+          <ScalarProperty Name="serviceId" ColumnName="serviceId" />
+          <ScalarProperty Name="serviceType" ColumnName="serviceType" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+          <ScalarProperty Name="BirthApplicationId" ColumnName="BirthApplicationId" />
+          <ScalarProperty Name="MarriageApplicationId" ColumnName="MarriageApplicationId" />
+          <ScalarProperty Name="DeathApplicationId" ColumnName="DeathApplicationId" />
+          <ScalarProperty Name="IDApplicationId" ColumnName="IDApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staffs">
+      <EntityTypeMapping TypeName="KSSModel.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="staffId" ColumnName="staffId" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="KSSModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

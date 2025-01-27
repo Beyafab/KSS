@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KSSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BirthApplication">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationId" Type="int" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lname" Type="nvarchar" MaxLength="255" />
+    <Property Name="sex" Type="nvarchar" MaxLength="10" />
+    <Property Name="Bdate" Type="date" />
+    <Property Name="Bplace" Type="nvarchar" MaxLength="255" />
+    <Property Name="subCity" Type="nvarchar" MaxLength="255" />
+    <Property Name="region" Type="nvarchar" MaxLength="255" />
+    <Property Name="zone" Type="nvarchar" MaxLength="255" />
+    <Property Name="woreda" Type="nvarchar" MaxLength="255" />
+    <Property Name="nationality" Type="nvarchar" MaxLength="255" />
+    <Property Name="mother_sFullname" Type="nvarchar" MaxLength="255" />
+    <Property Name="mother_sNationality" Type="nvarchar" MaxLength="255" />
+    <Property Name="father_sFullname" Type="nvarchar" MaxLength="255" />
+    <Property Name="father_sNationlity" Type="nvarchar" MaxLength="255" />
+    <Property Name="avaliableDates" Type="date" />
+    <Property Name="paymentMethod" Type="nvarchar" MaxLength="255" />
+    <Property Name="amount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ApplicationStatus" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DeathApplication">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationId" Type="int" Nullable="false" />
+    <Property Name="IdPhotoPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lname" Type="nvarchar" MaxLength="255" />
+    <Property Name="ConfirmationLetter" Type="ntext" />
+    <Property Name="AvaliableDates" Type="date" />
+    <Property Name="paymentMethod" Type="nvarchar" MaxLength="255" />
+    <Property Name="amount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ApplicationStatus" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="IDApplication">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationId" Type="int" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lame" Type="nvarchar" MaxLength="255" />
+    <Property Name="Bdate" Type="date" />
+    <Property Name="Btype" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" />
+    <Property Name="Adress" Type="ntext" />
+    <Property Name="HouseNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="AvaliableDates" Type="date" />
+    <Property Name="amount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="PaymentMethode" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmergencyContactFullname" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmergencyContactNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="ApplicationStatus" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Manager">
+    <Key>
+      <PropertyRef Name="managerId" />
+    </Key>
+    <Property Name="managerId" Type="int" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="255" />
+    <Property Name="password" Type="nvarchar" MaxLength="255" />
+    <Property Name="staffId" Type="int" />
+  </EntityType>
+  <EntityType Name="MarriageApplication">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationId" Type="int" Nullable="false" />
+    <Property Name="Fullnamespouse1" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fullnamespouse2" Type="nvarchar" MaxLength="255" />
+    <Property Name="IdSpouse1PhotoPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="Idspouse2PhotoPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="witnessAdress" Type="ntext" />
+    <Property Name="phoneNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="availableDates" Type="date" />
+    <Property Name="amount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="PaymentMethod" Type="nvarchar" MaxLength="255" />
+    <Property Name="ApplicationStatus" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="notificationId" />
+    </Key>
+    <Property Name="notificationId" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" />
+    <Property Name="ApplicationId" Type="int" />
+    <Property Name="staffId" Type="int" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="serviceId" />
+    </Key>
+    <Property Name="serviceId" Type="int" Nullable="false" />
+    <Property Name="serviceType" Type="nvarchar" MaxLength="255" />
+    <Property Name="StaffId" Type="int" />
+    <Property Name="BirthApplicationId" Type="int" />
+    <Property Name="MarriageApplicationId" Type="int" />
+    <Property Name="DeathApplicationId" Type="int" />
+    <Property Name="IDApplicationId" Type="int" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="staffId" />
+    </Key>
+    <Property Name="staffId" Type="int" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="role" Type="nvarchar" MaxLength="255" />
+    <Property Name="username" Type="nvarchar" MaxLength="255" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="userId" Type="int" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address" Type="ntext" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Age" Type="int" />
+    <Property Name="StaffId" Type="int" />
+  </EntityType>
+  <Association Name="FK__Manager__staffId__4D94879B">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+    <End Role="Manager" Type="Self.Manager" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="staffId" />
+      </Principal>
+      <Dependent Role="Manager">
+        <PropertyRef Name="staffId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__Appli__693CA210">
+    <End Role="BirthApplication" Type="Self.BirthApplication" Multiplicity="0..1" />
+    <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BirthApplication">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__staff__6A30C649">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+    <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="staffId" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="staffId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__userI__68487DD7">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service__BirthAp__5CD6CB2B">
+    <End Role="BirthApplication" Type="Self.BirthApplication" Multiplicity="0..1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BirthApplication">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="BirthApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service__BirthAp__6477ECF3">
+    <End Role="BirthApplication" Type="Self.BirthApplication" Multiplicity="0..1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BirthApplication">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="BirthApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service__DeathAp__5EBF139D">
+    <End Role="DeathApplication" Type="Self.DeathApplication" Multiplicity="0..1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeathApplication">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="DeathApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service__DeathAp__66603565">
+    <End Role="DeathApplication" Type="Self.DeathApplication" Multiplicity="0..1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeathApplication">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="DeathApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service__IDAppli__5FB337D6">
+    <End Role="IDApplication" Type="Self.IDApplication" Multiplicity="0..1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IDApplication">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="IDApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service__IDAppli__6754599E">
+    <End Role="IDApplication" Type="Self.IDApplication" Multiplicity="0..1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IDApplication">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="IDApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service__Marriag__5DCAEF64">
+    <End Role="MarriageApplication" Type="Self.MarriageApplication" Multiplicity="0..1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MarriageApplication">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="MarriageApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service__Marriag__656C112C">
+    <End Role="MarriageApplication" Type="Self.MarriageApplication" Multiplicity="0..1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MarriageApplication">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="MarriageApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service__StaffId__5BE2A6F2">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="staffId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="StaffId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service__StaffId__6383C8BA">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="staffId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="StaffId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Staff__userId__5AEE82B9">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="Staff">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Staff__userId__628FA481">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="Staff">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__User__StaffId__59FA5E80">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="staffId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="StaffId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__User__StaffId__619B8048">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="staffId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="StaffId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KSSModelStoreContainer">
+    <EntitySet Name="BirthApplication" EntityType="Self.BirthApplication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeathApplication" EntityType="Self.DeathApplication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IDApplication" EntityType="Self.IDApplication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manager" EntityType="Self.Manager" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MarriageApplication" EntityType="Self.MarriageApplication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notification" EntityType="Self.Notification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Manager__staffId__4D94879B" Association="Self.FK__Manager__staffId__4D94879B">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="Manager" EntitySet="Manager" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__Appli__693CA210" Association="Self.FK__Notificat__Appli__693CA210">
+      <End Role="BirthApplication" EntitySet="BirthApplication" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__staff__6A30C649" Association="Self.FK__Notificat__staff__6A30C649">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__userI__68487DD7" Association="Self.FK__Notificat__userI__68487DD7">
+      <End Role="User" EntitySet="User" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service__BirthAp__5CD6CB2B" Association="Self.FK__Service__BirthAp__5CD6CB2B">
+      <End Role="BirthApplication" EntitySet="BirthApplication" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service__BirthAp__6477ECF3" Association="Self.FK__Service__BirthAp__6477ECF3">
+      <End Role="BirthApplication" EntitySet="BirthApplication" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service__DeathAp__5EBF139D" Association="Self.FK__Service__DeathAp__5EBF139D">
+      <End Role="DeathApplication" EntitySet="DeathApplication" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service__DeathAp__66603565" Association="Self.FK__Service__DeathAp__66603565">
+      <End Role="DeathApplication" EntitySet="DeathApplication" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service__IDAppli__5FB337D6" Association="Self.FK__Service__IDAppli__5FB337D6">
+      <End Role="IDApplication" EntitySet="IDApplication" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service__IDAppli__6754599E" Association="Self.FK__Service__IDAppli__6754599E">
+      <End Role="IDApplication" EntitySet="IDApplication" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service__Marriag__5DCAEF64" Association="Self.FK__Service__Marriag__5DCAEF64">
+      <End Role="MarriageApplication" EntitySet="MarriageApplication" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service__Marriag__656C112C" Association="Self.FK__Service__Marriag__656C112C">
+      <End Role="MarriageApplication" EntitySet="MarriageApplication" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service__StaffId__5BE2A6F2" Association="Self.FK__Service__StaffId__5BE2A6F2">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service__StaffId__6383C8BA" Association="Self.FK__Service__StaffId__6383C8BA">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Staff__userId__5AEE82B9" Association="Self.FK__Staff__userId__5AEE82B9">
+      <End Role="User" EntitySet="User" />
+      <End Role="Staff" EntitySet="Staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Staff__userId__628FA481" Association="Self.FK__Staff__userId__628FA481">
+      <End Role="User" EntitySet="User" />
+      <End Role="Staff" EntitySet="Staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK__User__StaffId__59FA5E80" Association="Self.FK__User__StaffId__59FA5E80">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK__User__StaffId__619B8048" Association="Self.FK__User__StaffId__619B8048">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

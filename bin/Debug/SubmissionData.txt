@@ -1,0 +1,4 @@
+ID Image Path: C:\Users\Dell\Pictures\bootstrap.jpg
+Confirmation Letter Path: C:\Users\Dell\Pictures\black man.jpeg
+Available Date: 2025-01-29
+Payment Method: CBE birr
